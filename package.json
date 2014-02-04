@@ -1,6 +1,6 @@
 {
   "name": "dependencies-diff",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Merge dependencies and their versions",
   "main": "index.js",
   "scripts": {
