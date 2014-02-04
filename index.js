@@ -25,7 +25,9 @@ module.exports = function (lhs, rhs) {
         diff[key] = {
             major: rhsv.major - lhsv.major,
             minor: rhsv.minor - lhsv.minor,
-            patch: rhsv.patch - lhsv.patch
+            patch: rhsv.patch - lhsv.patch,
+            version: lhv,
+            newVersion: rhv
         };
     });
 
