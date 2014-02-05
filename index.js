@@ -3,6 +3,7 @@
 var semver = require('semver');
 
 function parseVersion(str) {
+    if (/[><|~]/.exec(str)) { return; }
     var re = /\d+\.\d+\.\d+/;
     var match = re.exec(str);
     if (!match) { return; }

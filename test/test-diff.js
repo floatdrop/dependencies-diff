@@ -17,6 +17,18 @@ describe('dependencies-diff', function () {
             var after = { 'bem': 'git://github.com/bem/bem-bl.git#0.4.11' };
             dd(before, after).should.containDeep(expected);
         });
+
+        it('should not accept only strict versions', function () {
+            var before = {
+                'bem': '~0.3.11',
+                'bem2': '>0.1.2'
+            };
+            var after = {
+                'bem': '0.3.12',
+                'bem2': '0.2.2'
+            };
+            dd(before, after).should.eql({});
+        });
     });
 
     describe('version changes', function () {
